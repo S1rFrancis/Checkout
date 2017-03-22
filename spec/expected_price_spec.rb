@@ -1,4 +1,4 @@
-require 'money'
+# Money test really, will most likely delete at sone point
 
 I18n.enforce_available_locales = false
 describe Money do
