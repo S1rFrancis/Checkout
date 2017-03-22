@@ -4,6 +4,6 @@ class Product
   def initialize(product_code, name, price_val)
     @product_code = product_code
     @name = name
-    @price = Money.new(price_val, "GBP").format
+    @price = Money.new(price_val, "GBP")
   end
 end

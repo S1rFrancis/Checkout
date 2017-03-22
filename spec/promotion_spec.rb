@@ -13,7 +13,7 @@ describe Promotion do
     items << Product.new("001", "Lavender heart", 9_25)
     items << Product.new("001", "Lavender heart", 9_25)
 
-    total = Money.new(22_75, "GBP").format
-    expect(promotion.apply(items, total)).to eq expected_total_price
+    total = Money.new(27_75, "GBP")
+    expect(promotion.apply(items, total).format).to eq expected_total_price
   end
 end
