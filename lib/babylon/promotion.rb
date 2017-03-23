@@ -1,4 +1,3 @@
-require 'byebug'
 class Promotion
   attr_accessor :product_code, :type, :unit, :scalar
 
@@ -17,16 +16,16 @@ class Promotion
       item_count = 0
       items.each { |item| item_count += 1 if item.product_code == @product_code }
 
-      if item_count > unit
+      if item_count >= @unit
         price = items.detect { |item| item.product_code == @product_code }.price
         total_item_cost = price * item_count
         total = total - total_item_cost
-        total += promotion_scalar
+        total += (promotion_scalar * item_count)
       end
     when "over"
-      unit = Money.new(unit, "GBP")
-      if total > unit
-        total = total - ((total / 100) * scalar)
+      threshold = Money.new(@unit, "GBP")
+      if total > threshold
+        total = total - ((total / Money.new(100, "GBP")) * Money.new(10, "GBP"))
       end
     end
     total

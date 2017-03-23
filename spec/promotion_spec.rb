@@ -4,9 +4,9 @@ require 'babylon/product'
 I18n.enforce_available_locales = false
 
 describe Promotion do
-  it "is able to correctly apply more than 2 lavender hearts price set to £8.50" do
+  it "is able to correctly apply more than 2 lavender hearts price set to £8.50 each" do
     promotion = Promotion.new("001", "morethan",2, 8_50)
-    expected_total_price = Money.new(8_50, "GBP").format
+    expected_total_price = Money.new(25_50, "GBP").format
 
     items = []
     items << Product.new("001", "Lavender heart", 9_25)
@@ -18,7 +18,7 @@ describe Promotion do
   end
 
   it "is able to correctly apply 10% off is you spend more than £60 promotion" do
-    promotion = Promotion.new(nil, "over", 60, 10)
+    promotion = Promotion.new(nil, "over", 60_00, 10)
     expected_total_price = Money.new(81_00, "GBP").format
 
     items = []
