@@ -7,7 +7,7 @@ I18n.enforce_available_locales = false
 describe Checkout do
   it "has a total price of £66.78" do
     promotion_rules = []
-    promotion_rules << Promotion.new("001", "morethan", 2, 8_50)
+    promotion_rules << Promotion.new("001", "multiples", 2, 8_50)
     promotion_rules << Promotion.new(nil, "over", 60_00, 10)
     checkout = Checkout.new(promotion_rules)
     item_1 = Product.new("001", "Lavender heart", 9_25)
@@ -25,7 +25,7 @@ describe Checkout do
 
   it "has a total price of £36.95" do
     promotion_rules = []
-    promotion_rules << Promotion.new("001", "morethan", 2, 8_50)
+    promotion_rules << Promotion.new("001", "multiples", 2, 8_50)
     promotion_rules << Promotion.new(nil, "over", 60_00, 10)
     checkout = Checkout.new(promotion_rules)
     item_1 = Product.new("001", "Lavender heart", 9_25)
@@ -43,7 +43,7 @@ describe Checkout do
 
   it "has a total price of £73.75" do
     promotion_rules = []
-    promotion_rules << Promotion.new("001", "morethan", 2, 8_50)
+    promotion_rules << Promotion.new("001", "multiples", 2, 8_50)
     promotion_rules << Promotion.new(nil, "over", 60_00, 10)
     checkout = Checkout.new(promotion_rules)
     item_1 = Product.new("001", "Lavender heart", 9_25)

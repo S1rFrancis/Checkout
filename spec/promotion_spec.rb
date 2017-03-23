@@ -5,7 +5,7 @@ I18n.enforce_available_locales = false
 
 describe Promotion do
   it "is able to correctly apply more than 2 lavender hearts price set to £8.50 each" do
-    promotion = Promotion.new("001", "morethan",2, 8_50)
+    promotion = Promotion.new("001", "multiples",2, 8_50)
     expected_total_price = Money.new(25_50, "GBP").format
 
     items = []

@@ -15,7 +15,7 @@ item_3 = Product.new("003", "Kids T-shirt", 19_95)
 
 # Create individual promotions
 promotion_rules = []
-promotion_rules << Promotion.new("001", "morethan", 2, 8_50)
+promotion_rules << Promotion.new("001", "multiples", 2, 8_50)
 promotion_rules << Promotion.new(nil, "over", 60_00, 10)
 
 # Create checkout

@@ -12,7 +12,7 @@ class Promotion
     promotion_scalar = Money.new(scalar, "GBP")
 
     case type
-    when "morethan"
+    when "multiples"
       item_count = 0
       items.each { |item| item_count += 1 if item.product_code == @product_code }
 
