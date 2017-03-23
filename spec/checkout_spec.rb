@@ -41,7 +41,7 @@ describe Checkout do
     expect(checkout.total.format).to eq expected_total_price
   end
 
-  it "has a total price of £73.76" do
+  it "has a total price of £73.75" do
     promotion_rules = []
     promotion_rules << Promotion.new("001", "morethan", 2, 8_50)
     promotion_rules << Promotion.new(nil, "over", 60_00, 10)
