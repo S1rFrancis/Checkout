@@ -5,9 +5,9 @@ A ruby checkout application using money gem, applies promotions in specific scen
 ### Setup
 ```
 bundle
-
-## Use Checkout and promotions
 ```
+## Use Checkout and promotions
+```ruby
 # Create individual products
 item_1 = Product.new("001", "Lavender heart", 9_25)
 item_2 = Product.new("002", "Personalised cufflinks", 45_00)
